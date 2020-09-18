@@ -60,6 +60,8 @@ def output_all_tokenized_results(docs, f_tok):
                 f_tok.write('\n')
             except:
                 continue
+    pool.close()
+    pool.join()
 
 
 def process_and_tokenize_json_file(input_path, language, keep_comments):
